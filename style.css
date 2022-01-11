@@ -14,8 +14,10 @@ main {
   margin-top: 4%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
   padding: 20px 60px 80px;
-  border-radius: 25px;
+  border-radius: 4px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.8);
 }
 
 header {
@@ -56,12 +58,14 @@ input:focus {
 }
 
 .selected {
-  background-color: gray;
+  color: rgb(240 , 24 , 193);
   font-size: large;
+  background-color: rgb(128, 128, 128);
 }
 
 .completed {
   text-decoration: line-through solid black;
+  color: black;
 }
 
 button {
@@ -147,4 +151,61 @@ footer {
   padding: 20px;
   font-size: large;
   font-weight: 900;
+}
+
+@media only screen and (max-width: 1024px) {
+  header h1 {
+    line-height: 1;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 1.3em;
+  }
+  
+  header p {
+    font-size: .53em;
+  }
+
+  input {
+    width: 65%;
+  }
+  
+  ::placeholder {
+    font-size: .8em;
+  }
+
+  button {
+    font-size: .6em;
+    padding: 7px;
+    margin-bottom: 15px;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: .65em;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  main {
+    width: 90%;
+    padding: 20px 30px 80px;
+  }
+  
+  header h1 {
+    line-height: 1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: .85em;
+  }
+  
+  header p {
+    font-size: .47em;
+  }
+
+  button {
+    font-size: .5em;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
 }
